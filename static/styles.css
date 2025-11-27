@@ -1,0 +1,25 @@
+
+body {
+  background-color: #f5f7fb;
+}
+
+.navbar {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.stat-card {
+  border-radius: 16px;
+}
+
+.stat-card h3 {
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 16px;
+  border: none;
+}
+
+.card-header {
+  border-bottom: 1px solid #eee;
+}

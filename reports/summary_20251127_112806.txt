@@ -1,0 +1,9 @@
+Expense Tracker Summary Report
+Generated: 2025-11-27T11:28:06.314124
+
+Total Spent (all time): ₹56776.0
+
+Category-wise spending:
+ - Food: ₹56221.0
+ - Travel: ₹500.0
+ - Other: ₹55.0

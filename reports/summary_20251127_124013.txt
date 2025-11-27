@@ -1,0 +1,13 @@
+Expense Tracker Summary Report
+Generated: 2025-11-27T12:40:13.982316
+
+Total Spent (all time): ₹20682.0
+
+Category-wise spending:
+ - Travel: ₹7800.0
+ - Shopping: ₹5050.0
+ - Food: ₹4182.0
+ - Hostel: ₹1950.0
+ - Other: ₹1700.0
+
+Predicted next month: ₹6390.6
