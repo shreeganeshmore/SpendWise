@@ -1,3 +1,6 @@
 __pycache__/
 *.py[cod]
 .venv/
+charts/*.png
+reports/*.csv
+reports/*.txt
