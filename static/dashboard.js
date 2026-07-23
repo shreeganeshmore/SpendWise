@@ -107,11 +107,16 @@ async function runPrediction() {
 async function exportReport() {
   try {
     const data = await fetchJSON("/export_report");
-    if (data.ok) {
-      alert("Report generated! Check the 'reports' and 'charts' folders on the server.");
-    } else {
+    if (!data.ok || !data.files?.csv) {
       alert("Could not generate report.");
+      return;
     }
+    const downloadLink = document.createElement("a");
+    downloadLink.href = `/reports/${encodeURIComponent(data.files.csv)}`;
+    downloadLink.download = data.files.csv;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    downloadLink.remove();
   } catch (e) {
     alert("Error generating report.");
   }
