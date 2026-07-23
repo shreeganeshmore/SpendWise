@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+      .welcome-actions{display:flex;align-items:center;gap:22px}.coin-stage{width:92px;height:92px;perspective:600px}.coin{position:relative;width:72px;height:72px;margin:10px;transform-style:preserve-3d;animation:coin-spin 5s linear infinite}.coin-face{position:absolute;inset:0;display:grid;place-items:center;border:4px solid #f7ca63;border-radius:50%;backface-visibility:hidden;box-shadow:inset 0 0 0 5px #d99023,inset 0 0 0 8px #ffd97e,0 10px 20px #b8752533;background:radial-gradient(circle at 32% 27%,#fff1ad 0 6%,#f5bf48 30%,#d8891a 72%);color:#8b5010;font:800 31px Manrope}.coin-face.back{transform:rotateY(180deg)}.coin-edge{position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(90deg,#b76c16 0 2px,#f5c250 2px 4px);transform:rotateY(90deg);box-shadow:0 0 0 3px #cc841d}@keyframes coin-spin{to{transform:rotateY(360deg)}}@media(max-width:760px){.welcome-actions{justify-content:space-between;margin-top:20px}.coin-stage{width:70px;height:70px}.coin{width:56px;height:56px;margin:7px}.coin-face{font-size:24px;border-width:3px}}@media(prefers-reduced-motion:reduce){.coin{animation:none}}
+    </style>
   </head>
   <body>
     <div class="background-orb orb-left"></div><div class="background-orb orb-right"></div>
@@ -18,7 +21,7 @@
     </nav>
 
     <main class="dashboard-shell">
-      <section class="welcome"><div><p class="eyebrow">PERSONAL FINANCE DASHBOARD</p><h1>Make every rupee<br><em>count.</em></h1><p>See your spending clearly, build better habits, and feel in control of your money.</p></div><a class="quick-add" href="{{ url_for('add_expense_route') }}"><span>+</span><small>Quickly add<br>an expense</small></a></section>
+      <section class="welcome"><div><p class="eyebrow">PERSONAL FINANCE DASHBOARD</p><h1>Make every rupee<br><em>count.</em></h1><p>See your spending clearly, build better habits, and feel in control of your money.</p></div><div class="welcome-actions"><div class="coin-stage" aria-hidden="true"><div class="coin"><div class="coin-face">₹</div><div class="coin-face back">₹</div><div class="coin-edge"></div></div></div><a class="quick-add" href="{{ url_for('add_expense_route') }}"><span>+</span><small>Quickly add<br>an expense</small></a></div></section>
 
       <section class="stats-grid" aria-label="Expense summary">
         <article class="stat-card today"><span class="stat-icon">◷</span><p>Today</p><h2 id="todayAmount">&#8377;0</h2><small>Total spent today</small></article>
